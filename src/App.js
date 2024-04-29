@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css";
+import { Link } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />    
+      <div className="container text-center">
+        <br />
+        <h1 className="display-4 text-dark"><b>WELCOME TO CUREHUB</b></h1>
+        <hr />
+        <br /><br /><br />
+        <h2>Create An Account</h2>
+        <br />
+        <Link to="/register" className="btn btn-dark btn-lg ">Register</Link>
+        <br /><br /><br /><br /><br />
+        <h3>Already Have An Account</h3>
+        <Link to="/login" className="btn btn-dark btn-lg">Login</Link>
+      </div>
+    </>
   );
 }
 
